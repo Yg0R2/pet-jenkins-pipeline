@@ -1,0 +1,18 @@
+plugins {
+    id 'groovy'
+}
+
+sourceSets {
+    jenkins {
+        groovy {
+            srcDirs = ['vars', 'src']
+        }
+        resources {
+            srcDirs = ['resources']
+        }
+    }
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '+'
+}
