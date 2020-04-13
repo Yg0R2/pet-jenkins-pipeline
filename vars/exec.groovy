@@ -20,3 +20,11 @@ def call(String script, boolean returnStdout = false) {
         return result
     }
 }
+
+def silent(String script, boolean returnStdout = false) {
+    try {
+        exec(script: script, returnStdout: returnStdout)
+    }
+    catch (error) {
+    }
+}
